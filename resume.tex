@@ -1,0 +1,205 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Plasmati Graduate CV
+% LaTeX Template
+% Version 1.0 (24/3/13)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% Alessandro Plasmati (alessandro.plasmati@gmail.com)
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+% Important note:
+% This template needs to be compiled with XeLaTeX.
+% The main document font is called Fontin and can be downloaded for free
+% from here: http://www.exljbris.com/fontin.html
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[a4paper,10pt]{extarticle} % Default font size and paper size
+
+\usepackage{fontspec} % For loading fonts
+\defaultfontfeatures{Mapping=tex-text}
+% \setmainfont[SmallCapsFont = Fontin SmallCaps]{Fontin} % Main document font
+% \fontspec{[FontAwesome.otf]}
+\setmainfont[Path = ./Ubuntu/,  %% Optional; but UPDATE this if 
+                                %% your font files are in a folder
+ Extension = .ttf,
+ UprightFont = *-Regular,
+ BoldFont = *-Bold,
+ ItalicFont = *-Italic,
+ SmallCapsFont = *-Medium]
+{Ubuntu}
+\fontspec{[fontawesome-webfont.ttf]}
+
+\usepackage{color}
+\definecolor{primary}{rgb}{0.4, 0, 0.1}
+\definecolor{secondary}{rgb}{0, 0, 0}
+
+\usepackage{xunicode,xltxtra,url,parskip} % Formatting packages
+
+\usepackage[usenames,dvipsnames]{xcolor} % Required for specifying custom colors
+
+%\usepackage[big]{layaureo} % Margin formatting of the A4 page, an alternative to layaureo can be 
+%\usepackage{fullpage}
+\usepackage{geometry}
+\geometry{a4paper,margin=0.40cm}
+%\geometry{a4paper,left=20mm, top=20mm}
+ %To reduce the height of the top margin uncomment: \addtolength{\voffset}{-1.3cm}
+
+\usepackage{hyperref} % Required for adding links	and customizing them
+\definecolor{linkcolour}{rgb}{0,0.4,0.5} % Link color
+\hypersetup{colorlinks,breaklinks,urlcolor=linkcolour,linkcolor=linkcolour} % Set link colors throughout the document
+
+\usepackage{titlesec} % Used to customize the \section command
+\titleformat{\section}{\large\scshape\raggedright}{}{0em}{}[\titlerule] % Text formatting of sections
+\titlespacing{\section}{0pt}{0pt}{0pt} % Spacing around sections
+
+\usepackage{multicol}
+\setlength{\columnsep}{0cm}
+
+\usepackage{tabularx}
+
+\usepackage{textcomp}
+
+\usepackage{fontawesome}
+
+\usepackage{enumitem}
+\setlist[description]{%
+  topsep=10pt,               % space before start / after end of list
+  itemsep=1pt,               % space between items
+%  font={\bfseries\sffamily\color{red}}, % if colour is needed
+}
+
+\def\arraystretch{1}
+\renewcommand{\baselinestretch}{1.1}
+
+\begin{document}
+
+\pagestyle{empty} % Removes page numbering
+
+%----------------------------------------------------------------------------------------
+%	NAME AND CONTACT INFORMATION
+%----------------------------------------------------------------------------------------
+\begin{multicols}{3}
+
+\normalsize  \faGlobe\ {\href{https://proffapt.me/}{\  proffapt.me}}\\
+\normalsize \faGithub\ {\href{https://github.com/proffapt}{\  proffapt}}\\
+\columnbreak
+\normalsize\par{\centering{\huge\textsc{\textcolor{primary}{Arpit Bhardwaj}}}\par} 
+\par{\centering\normalsize {\textsc{Mathura, India}}\hfill\par}
+\columnbreak
+\raggedright\hfill\normalsize \faEnvelope\ {\href{mailto:proffapt@pm.me}{\  proffapt@pm.me}}\\
+\raggedright\hfill\normalsize \faLinkedinSquare\ {\href{https://www.linkedin.com/in/proffapt}{\  proffapt}}\\
+\end{multicols}
+\vspace{-0.4 cm}
+
+%----------------------------------------------------------------------------------------
+%	EDUCATION
+%----------------------------------------------------------------------------------------
+\section{\textcolor{primary}{Academics}}
+\vspace{+0.1cm}
+
+\begin{tabular}{r|p{17.5cm}}	
+
+ \textbf{2021-present} & \textit{B.Tech. in Industrial and Systems Engineering} - \textbf{Indian Institute of Technology, Kharagpur}\\
+ \hfill CGPA & \textbf{9.12}\\
+ \textbf{2021} & \textit{Joint Entrance Examination}, \textbf{Advanced}\\
+ \hfill AIR & \textbf{3884}\\
+ \textbf{2020} & \textit{Higher Secondary School Certificate Examination}, \textbf{CBSE}\\
+ \hfill Percentage & \textbf{95\%}\\
+ \textbf{2018} & \textit{Secondary School Certificate Examination}, \textbf{CBSE}\\
+ \hfill Percentage & \textbf{96.4\%} \\
+ 
+\end{tabular}
+
+%----------------------------------------------------------------------------------------
+%	EXPERIENCE
+%----------------------------------------------------------------------------------------
+%\vspace{+0.2cm}
+%\section{\textcolor{primary}{Experience}}
+%\vspace{+0.1cm}
+
+%\begin{tabularx}{\linewidth}{ l | X }
+
+
+
+%\multicolumn{2}{c}{} \\
+%\end{tabularx}
+
+%----------------------------------------------------------------------------------------
+%	Projects
+%----------------------------------------------------------------------------------------
+ \vspace{+0.2cm}
+\section{\textcolor{primary}{\href{https://www.github.com/proffapt}{Projects}}}
+ \vspace{-0.5cm}
+\begin{tabular}{p{19.7cm}}
+% \fontsize{9}{12}\selectfont{
+\begin{description}[style=nextline, font=$\bullet$\hspace{2mm}\normalsize]
+ 
+ \item[{\href{https://github.com/proffapt/gsyc}{GSYNC}}] 
+ Developed in \textit{BASH}, gsync is a script which enables a \textbf{*nix} (\textit{Linux and Unix}) user to automate my \textbf{self-devised process} of \textit{syncing} files and folders from their local system \textit{to GitHub} in \textit{real-time} in a sophisticated manner as a \textbf{service} along with \textbf{colored-logs-management}.
+ 
+ \item[{\href{https://github.com/proffapt/code-runner}{Code\_Runner}}] 
+Developed in \textit{BASH}, code-runner is a tool which \textit{eases} a \textbf{*nix} (\textit{Linux and Unix}) user in many ways \textit{during the process} of \textbf{compiling} and \textbf{executing} their code written in various \textit{supported} languages. Mentioning out some of them: \textbf{determining the version of python} (\textit{90\% accurate}), \textbf{single command to compile and run} code, \textbf{supports files with spaces in their name}, \textbf{cleans out compiled binary} after execution by-default if not commanded to not to do so, \textbf{vim and vs-code keybindings} maintaining the development flow, integrated \textbf{debugging mode}.
+ 
+ \item[{\href{https://github.com/proffapt/own-youtube}{OWN YouTube}}] 
+ YouTube has turned into a \textit{binge watching} and \textit{addictive-content consumption} platform which unwillingly wastes our huge chunk of daily time. OWN YouTube is an \textbf{extension} developed using \textit{Javascript}, \textit{HTML} and \textit{CSS} to tackle this exact problem by enabling user to \textbf{disable} \textit{shorts}, \textit{trending}, \textit{recommendations} and whatever visible exists in the YouTube's front-end along with \textbf{blocking ads} and adding a few functionalities like customised \textbf{video-speed-controller} exceeding the \textit{2x limit} set by YouTube.
+ 
+  \item[Github OpenSource Projects] Worked on a lot of opensource projects: \href{https://github.com/proffapt/whapc}{\ whapc}, 
+  \href{https://github.com/proffapt/spg}{spg} and \href{https://github.com/proffapt?tab=repositories}{many more}.
+\end{description}
+% }
+\end{tabular}
+
+%----------------------------------------------------------------------------------------
+%	SKILLS 
+%----------------------------------------------------------------------------------------
+ \vspace{-0.3cm}
+ \section{\textcolor{primary}{Technical Skills}}
+ \vspace{+0.1cm}
+
+ \begin{tabular}{r|p{15cm}}
+ \textsc{Languages} & C, C++, Java, Bash, HTML, Python, Javascript, Nix-Lang, Lua \\
+ \textsc{Data Storage / Handling} & MySQL, MongoDB, PostgreSQL \\
+ \textsc{OS Platforms} & Unix(FreeBSD, OpenBSD, Solaris-8,9,10 and MacOS X), Linux 5/6 (Debian, Fedora, CentOS, Arch, Gentoo and many of their derivatives), Windows (7, 8, 8.1 and 10), NixOS \\
+ \textsc{Others} & Latex, Penetration-testing(Red Teaming and Blue Teaming), System Administration and Server Management (Linux, Unix and Windows), Git and GitHub \\
+\end{tabular}
+
+
+%----------------------------------------------------------------------------------------
+%	Activities & Leadership
+%----------------------------------------------------------------------------------------
+\vspace{+0.2cm}
+\section{\textcolor{primary}{\href{https://www.github.com/proffapt/bodhitree}{Technical Skills}}}
+\vspace{+0.1cm}
+
+\begin{itemize}[leftmargin=0.55cm, rightmargin=0.2cm, label={\Large\textbullet}]
+
+\item \textbf{Co-Founder, \href{https://cybernity.org/}{Cybernity}}: Created a community during my JEE preparation to spread the "real" ideology of cybersecurity (aka hacking) and helping (teaching and guiding) people the correct way to approach and learn in this field.
+
+\item \textbf{Core-Team Member, \href{https://kossiitkgp.org/about/index.html}{KOSS IIT Kharagpur}}: Responsible for promoting and maintaining open-source culture and contributing to tools (campus-centric) such as feedback-automator, and timetable manager.
+
+\end{itemize}
+
+%----------------------------------------------------------------------------------------
+%	COURSEWORK
+%----------------------------------------------------------------------------------------
+ \vspace{+0.2cm}
+ \section{\textcolor{primary}{Relevant Coursework}
+ \hfill\small\textsc{(T)heory and (L)aboratory}}
+ \vspace{+0.1cm}
+
+ \begin{tabular}{r|p{15cm}}
+ \textsc{Completed} & \href{https://github.com/proffapt/iitkgp-pds-lab }{Programming And Data Structures (T/L)} | Linear Algebra (T) \\
+ \textsc{Ongoing} & Probability and Statistics (T)
+ \end{tabular}
+
+\end{document}
