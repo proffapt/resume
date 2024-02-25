@@ -186,12 +186,12 @@
 %  \item[KWoC Stats API] 
 % Revamped Stats generation API for {\href{https://kwoc.kossiitkgp.org}{KWoC}}, using the \textit{Golang programming language} and the \textbf{go-fiber framework}. The API was designed to fetch the contributions made by participants during the event, with \textbf{Postgresql} serving as the underlying database, managed via \textbf{gorm}. The generated stats included crucial information such as the number of commits, pull requests, lines added and lines removed for every project the student worked on.
 
- \item[{\href{http://github.com/metakgp/mftp}{MFTP}} | Python, Gmail API, ERP Login Module, Systemd, Cronjob ] 
+ \item[{\href{http://github.com/metakgp/mftp}{MFTP}} | Python, Docker, Gmail API, ERP Login Module, Systemd, Cronjob ]
 - Developed a service emailing students in\textbf{ real-time placement portal notices}, ensuring no missed critical deadlines \newline
 - Designed to run as a robust \textbf{systemd service} or \textbf{scheduled cronjob}, monitoring  placement portal every \textbf{2 minutes} \newline
 - Integrated with \textbf{SMTP} servers \& \textbf{Gmail API} for timely delivery of notification emails \textbf{within 1 minute} of post to students \newline
 - Utilised \href{https://github.com/proffapt/iitkgp-erp-login-pypi}{\textbf{ERP Login Python Package}} to implement login functionality for ERP - where the placement portal resides \newline
-- Architected adaptable \textbf{modular core design} allowing user configuration of preferred email delivery and credentials
+- Implemented a \textbf{health-check} utility to periodically check the logs \& notify in case of errors, both deployed via \textbf{Docker}
 
 \item[{\href{https://github.com/proffapt/iitkgp-erp-login-pypi}{ERP Login Module}} | Python, Gmail API]
 - Developed and published the iitkgp-erp-login, \textbf{Python package on PyPi}, catalyzing a remarkable surge in user adoption \newline
@@ -291,4 +291,4 @@
  % \end{tabular}
  %------
 
-\end{document}f
+\end{document}
