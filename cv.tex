@@ -1,0 +1,321 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Plasmati Graduate CV
+% LaTeX Template
+% Version 1.0 (24/3/13)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% Alessandro Plasmati (alessandro.plasmati@gmail.com)
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creivecommons.org/licenses/by-nc-sa/3.0/)
+%
+% Important note:
+% This template needs to be compiled with XeLaTeX.
+% The main document font is called Fontin and can be downloaded for free
+% from here: http://www.exljbris.com/fontin.html
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[a4paper,10pt]{extarticle} % Default font size and paper size
+
+\usepackage{fontspec} % For loading fonts
+\defaultfontfeatures{Mapping=tex-text}
+% \setmainfont[SmallCapsFont = Fontin SmallCaps]{Fontin} % Main document font
+% \fontspec{[FontAwesome.otf]}
+\setmainfont[Path = ./Ubuntu/,  %% Optional; but UPDATE this if 
+                                %% your font files are in a folder
+ Extension = .ttf,
+ UprightFont = *-Regular,
+ BoldFont = *-Bold,
+ ItalicFont = *-Italic,
+ SmallCapsFont = *-Medium]
+{Ubuntu}
+\fontspec{[fontawesome-webfont.ttf]}
+
+\usepackage{color}
+\definecolor{primary}{rgb}{0.4, 0, 0.1}
+\definecolor{secondary}{rgb}{0, 0, 0}
+
+\usepackage{xunicode,xltxtra,url,parskip} % Formatting packages
+
+\usepackage[usenames,dvipsnames]{xcolor} % Required for specifying custom colors
+
+%\usepackage[big]{layaureo} % Margin formatting of the A4 page, an alternative to layaureo can be 
+%\usepackage{fullpage}
+\usepackage{geometry}
+\geometry{a4paper,margin=0.40cm}
+%\geometry{a4paper,left=20mm, top=20mm}
+ %To reduce the height of the top margin uncomment: \addtolength{\voffset}{-1.3cm}
+
+\usepackage{hyperref} % Required for adding links	and customizing them
+\definecolor{linkcolour}{rgb}{0,0.4,0.5} % Link color
+\hypersetup{colorlinks,breaklinks,urlcolor=linkcolour,linkcolor=linkcolour} % Set link colors throughout the document
+
+\usepackage{titlesec} % Used to customize the \section command
+\titleformat{\section}{\large\scshape\raggedright}{}{0em}{}[\titlerule] % Text formatting of sections
+\titlespacing{\section}{0pt}{0pt}{0pt} % Spacing around sections
+
+\usepackage{multicol}
+\setlength{\columnsep}{0cm}
+
+\usepackage{tabularx}
+
+\usepackage{textcomp}
+
+\usepackage{fontawesome}
+
+\usepackage{enumitem}
+\setlist[description]{%
+  topsep=10pt,               % space before start / after end of list
+  itemsep=1pt,               % space between items
+%  font={\bfseries\sffamily\color{red}}, % if colour is needed
+}
+
+\def\arraystretch{1}
+\renewcommand{\baselinestretch}{1.1}
+
+\begin{document}
+
+\pagestyle{empty} % Removes page numbering
+
+%----------------------------------------------------------------------------------------
+%	NAME AND CONTACT INFORMATION
+%----------------------------------------------------------------------------------------
+\begin{multicols}{3}
+
+\normalsize  \faGlobe\ {\href{https://proffapt.hashnode.dev/}{\  proffapt.hashnode.dev}}\\
+\normalsize \faGithub\ {\href{https://github.com/proffapt}{\  GitHub}}\\
+\columnbreak
+\normalsize\par{\centering{\huge\textsc{\textcolor{primary}{Arpit Bhardwaj}}}\par} 
+\par{\centering\normalsize {\textsc{Mathura, India}}\hfill\par}
+\columnbreak
+\raggedright\hfill\normalsize \faEnvelope\ {\href{mailto:proffapt@pm.me}{\  proffapt@pm.me}}\\
+\raggedright\hfill\normalsize \faLinkedinSquare\ {\href{https://www.linkedin.com/in/proffapt}{\  LinkedIn}}\\
+\end{multicols}
+\vspace{-0.4 cm}
+
+%----------------------------------------------------------------------------------------
+%	EDUCATION
+%----------------------------------------------------------------------------------------
+\section{\textcolor{primary}{Academics}}
+\vspace{+0.1cm}
+
+\begin{tabular}{r|p{17.5cm}}	
+
+ \textbf{2021-present} & B.Tech. in \textit{Industrial \& Systems Engineering} - \textbf{Indian Institute of Technology, Kharagpur}\\
+ \hfill CGPA & \textbf{8.46}\\
+
+ %-- No One cares about it after seeing IIT Kharagpur ---
+ % \textbf{2021} & \textit{Joint Entrance Examination}, \textbf{Advanced}\\
+ % \hfill AIR & \textbf{3884}\\
+ % \textbf{2020} & \textit{Higher Secondary School Certificate Examination}, \textbf{CBSE}\\
+ % \hfill Percentage & \textbf{95\%}\\
+ % \textbf{2018} & \textit{Secondary School Certificate Examination}, \textbf{CBSE}\\
+ % \hfill Percentage & \textbf{96.4\%} \\
+ %------
+ 
+\end{tabular}
+
+% ----------------------------------------------------------------------------------------
+% 	EXPERIENCE
+% ----------------------------------------------------------------------------------------
+\vspace{+0.2cm}
+\section{\textcolor{primary}{Experience}}
+\vspace{+0.1cm}
+
+\begin{tabularx}{\linewidth}{ l | X }
+
+\textsc{Apr '24} & \textbf{Software Engineering Intern: {\href{https://awsmo.ai/}{\ AWSMO}}}\hfill\textbf{Remote} \\
+\textsc{Present} & {- Implemented \textbf{CI/CD pipelines} using \textbf{GitHub Actions} for all services, 
+                 featuring post-deployment health checks \& \textbf{rollback on failure}, ensuring $\simeq$40\% less downtime \& maintaining system integrity across the deployment lifecycle. } \\
+                 & {- Orchestrated multi-service architecture using \textbf{Terraform}, automating infrastructure management \& deployment.} \\
+                 & {- Implemented business logic in \textbf{Django Rest Framework}, streamlined ML training, utilized \textbf{AWS Batch} for \textit{55\%} faster execution, and \textbf{AWS CloudFormation}, enhancing overall workflow automation and scalability} by over \textit{50\%}. \\
+                 & {- Developed a custom \textit{stress testing framework} using \textbf{Golang}, \textbf{Python}, and \textbf{Terraform} to simulate various load patterns on servers, improving \textbf{testing efficiency by 50\%} and identifying \textbf{20 critical bottlenecks} across all services.} \\
+
+\multicolumn{2}{c}{} \\
+\end{tabularx}
+
+%----------------------------------------------------------------------------------------
+%	Awards
+%----------------------------------------------------------------------------------------
+ \vspace{-0.1cm}
+\section{\textcolor{primary}{Awards}}
+ \vspace{0.1cm}
+% \fontsize{9}{12}\selectfont{
+\begin{description}[style=nextline, font=$\bullet$\hspace{2mm}\normalsize]
+
+ \item[{\href{https://interiit-tech.org/}{InterIIT Tech Meet 12.0}} | Contingent Gold ] 
+- Secured overall \textbf{first place consecutively for the third time} in the InterIIT Tech Meet 12.0 as a team held by IIT Madras \newline
+- Participated in \textbf{3 events} as a developer in the team, working on \textbf{backend}, \textbf{cloud systems architecture} and \textbf{blockchain} \newline
+- Developed novel applications using \textbf{Metamask Snaps}; \textbf{patched bugs} in \href{https://github.com/aptos-labs/aptos-core}{\textbf{aptos library}} to send requests from browser \newline
+- Implemented \textbf{CI/CD} automation for custom-built backends supporting two major events, enabling continuous delivery
+\end{description}
+% }
+
+%----------------------------------------------------------------------------------------
+%	Projects
+%----------------------------------------------------------------------------------------
+ \vspace{-0.1cm}
+\section{\textcolor{primary}{Projects}}
+ \vspace{0.1cm}
+% \fontsize{9}{12}\selectfont{
+\begin{description}[style=nextline, font=$\bullet$\hspace{2mm}\normalsize]
+
+ \item[{\href{https://play.google.com/store/apps/details?id=com.apnainsti&pli=1}{ApnaInsti}} | Golang, AWS, Docker, Nginx ] 
+- Developed \textbf{official mobile app for IIT Kharagpur} centralizing academic data, events \& integrating exclusive features \newline
+- Managed deployment on \textbf{AWS EC2} with \textbf{RDS} \& \textbf{Docker}, utilizing \textbf{CodeDeploy} \& \textbf{CodePipeline}, scaling for \textbf{2000+} users \newline
+- Built features: \textbf{travel share} \& \textbf{buy/sell portal}; led a team developing \textbf{Django REST backend} \& \textbf{React Native frontend} \newline
+- Constructed the \textbf{feature roadmap} and oversaw the \textbf{system design} and \textbf{UI design}, driving the overall technical process \newline
+- Implemented \textbf{real-time Score Board} feature for GC using \textbf{Go} and \textbf{WebSockets}, deployed as micro-services in \textbf{Docker}
+
+ \item[{\href{http://github.com/metakgp/mftp}{MFTP}} | Python, Docker, Gmail API, ERP Login Module, Systemd, Cronjob ]
+- Developed a service delivering students \textbf{ real-time placement portal notices}, ensuring no missed critical deadlines \newline
+- Designed to run as a robust \textbf{systemd service} or \textbf{scheduled cronjob}, monitoring ERP placement portal periodically \newline
+- Integrated with \textbf{SMTP}, \textbf{Gmail API} \& \href{https://ntfy.sh}{\textbf{NTFY}} for timely delivery of notification emails \textbf{within 1 minute} of post to students \newline
+- Utilised \href{https://github.com/proffapt/iitkgp-erp-login-pypi}{\textbf{ERP Login Python Package}} to implement login functionality for ERP - where the college placement portal resides \newline
+- Implemented a \textbf{health-check} utility to periodically check the logs \& notify in case of errors, both deployed via \textbf{Docker}
+
+ \item[{\href{https://naarad.metakgp.org}{Naarad}} | Golang, Nginx, Digital Ocean, GitHub Actions, Docker ] 
+- Deployed a customised version of \href{https://ntfy.sh/app}{\textbf{NTFY}} - \textbf{student run noticeboard service} for IIT KGP students - serving \textbf{5000+ students} \newline
+- Managed deployment on \textbf{Digital Ocean} with \textbf{Docker}, utilizing \textbf{GitHub Actions} for \textbf{CI/CD}, scaling for over \textbf{15,000} users \newline
+- Implemented \href{https://heimdall.metakgp.org}{\textbf{Heimdall}} authentication, \textbf{OTP} verification via \textbf{institute email}, \textbf{JWT} \& \textbf{NGINX} rules, allowing only KGPians \newline
+- Engineered a \href{https://naarad-signup.metakgp.org}{\textbf{custom user registration system}} integrating \textbf{JWT} authentication from \textbf{Heimdall}, credentials sent to email \newline
+- Maintained a \href{https://github.com/metakgp/naarad-ntfy}{\textbf{custom NTFY image}} with a \textbf{cross repository workflow trigger}, deploying naarad once the image is updated \newline
+- Integrated with \href{https://github.com/metakgp/mftp}{\textbf{MFTP}} serving \textbf{Internship and Placement notices} with separate topics for Internship, Placement \& PPO
+
+ \item[\href{https://github.com/tsg-iitkgp/ops-architecture}{On-Premise Server Setup \& Management} | Proxmox, Nginx, Docker ] 
+- Configured Proxmox as a \textbf{Type-1 Hypervisor}, optimizing resources, and enhancing security, ensuring high availability \newline
+- Implemented a fault-tolerant \textbf{3-layer architecture}, efficiently handling DNS requests, microservices, \& outgoing traffic \newline
+- Deployed \textbf{Nginx} as the single entry point, accepting \& forwarding DNS requests to the appropriate dockerized service \newline
+- Efficiently orchestrated and managed multiple VMs running isolated \textbf{dockerized microservices}, ensuring \textbf{scalability} \newline
+- Implemented a dedicated gateway machine performing \textbf{SNAT} for routing and forwarding outbound requests securely \newline
+- Implemented a robust \textbf{custom CI/CD pipeline}, managing authentication of requests through \textbf{encrypted auth tokens}
+
+\item[{\href{https://github.com/proffapt/Metahub}{Metahub}} | C, Networking, Bash, systemd ]
+- Revamped a \href{http://www.ptokax.org/}{\textbf{PtokaX}} based \href{https://en.wikipedia.org/wiki/Direct_Connect_(protocol)}{\textbf{Direct Connect}} (DC) Hub exclusive to IIT Kharagpur, simplifying the configuration process \newline
+- Meticulously identified and \textbf{resolved compilation errors}, ensuring a successful build and seamless installation process \newline
+- \textbf{Rectified a bug} affecting the ban functionality, resulting into incorrect redirection which improved the server stability \newline
+- Developed a script to \textbf{automate the setup, start, and stop processes} of the server, enhancing ease of management \newline
+- Implemented a script to \textbf{monitor the status of the server}, ensuring continuous operation and proactive monitoring \newline
+- Successfully established a reliable system startup service using \textbf{systemd}, guaranteeing uninterrupted server availability \newline
+- \textbf{Handled static IP configuration} when the host device changes locations, improving network stability \& accessibility
+
+\item[{\href{https://qp.metakgp.org}{Intelligent Question Paper Search}} | Golang, Docker, PostgreSQL, GitHub Actions]
+- Co-developed backend in \textit{Golang} for a platform to serve \textbf{previous year question papers} for courses offered at IIT KGP \newline
+- Leveraged \textbf{PostgreSQL} to implement \textbf{vector search} to efficiently provide possible suggestions for requested keywords \newline
+- Implemented \textbf{multi-staged builds} in Dockerfile, \textit{reducing the image size} by \textbf{$\simeq$85\%}, saving \textbf{critical 10\%} of \textit{storage on server}
+
+\item[{\href{https://github.com/proffapt/iitkgp-erp-login-pypi}{ERP Login Module}} | Python, Gmail API]
+- Developed and published the iitkgp-erp-login, \textbf{Python package on PyPi}, catalyzing a remarkable surge in user adoption \newline
+- Successfully achieved an outstanding \textbf{90\%} reduction in login workflow lines, significantly enhancing code conciseness \newline
+- Implemented \textbf{OTP support}, using the Gmail-enabled Google API to fetch the latest OTP mail, ensuring seamless login \newline
+- Engineered in such a way that it also \textbf{supports web apps} now utilized in various projects like \href{https://gyfe.metakgp.org}{\textbf{GYFE}}, \href{https://gyft.metakgp.org}{\textbf{GYFT}}, and \href{https://github.com/metakgp/mftp}{\textbf{MFTP}} \newline
+- Orchestrated robust \textbf{deployment pipelines} to \textbf{build} and \textbf{publish} the release on GitHub and \href{https://pypi.org/project/iitkgp-erp-login/}{\textbf{Python Package Index}}
+
+\item[{\href{https://github.com/proffapt/fERP}{fERP}} | HTML, CSS, JavaScript, Web Browser Extension, BASH, Nginx, OCR]
+- Published a browser extension \textbf{automating feedback form filling} for IIT Kharagpur students, used by \textbf{1000+} students \newline
+- Ensured seamless compatibility with \textbf{Chromium and Firefox based browsers}, expanding reach to a bigger user base \newline
+- Implemented total \textbf{3 feedback modes} - positive, negative and neutral - which ensured diverse feedback representation \newline
+- Enhanced efficiency by \textbf{automating the transition} to the next course/professor upon form submission, saving  time \newline
+- Implemented a novel algorithm to solve the \textbf{CAPTCHA} with above \textbf{90\%} accuracy written in \textbf{BASH}, served using \textbf{nginx} \newline
+- Engineered \textbf{deployment pipelines} to \textbf{build} and \textbf{publish} on - \textbf{GitHub}, \href{https://addons.mozilla.org/en-US/firefox/addon/ferp/}{\textbf{Mozilla Add-on Store}} and \href{https://chromewebstore.google.com/detail/ferp/cdmjkgfdjjebpjejjnckkgljdmijjnom?hl=en&authuser=0}{\textbf{Chrome Web Store}}
+
+%  \item[KWoC Stats API] 
+% Revamped Stats generation API for {\href{https://kwoc.kossiitkgp.org}{KWoC}}, using the \textit{Golang programming language} and the \textbf{go-fiber framework}. The API was designed to fetch the contributions made by participants during the event, with \textbf{Postgresql} serving as the underlying database, managed via \textbf{gorm}. The generated stats included crucial information such as the number of commits, pull requests, lines added and lines removed for every project the student worked on.
+
+%  \item[{\href{https://github.com/proffapt/own-youtube}{Own YouTube}}] 
+% OWN YouTube is a \textbf{browser extension} that was developed using Javascript. The extension injects custom HTML and CSS for the YouTube frontend in real-time, \textbf{allowing users to disable shorts, trending videos, recommendations, and any other visible content}. Additionally, the extension \textbf{blocks ads} and offers a few additional features, such as a customized \textbf{video speed controller that exceeds the 2x limit} set by YouTube. It has greatly improved users' focus and productivity, leading to better utilization of their time.
+
+ \item[{\href{https://github.com/proffapt/code-runner}{Code Runner}} | Bash, Vim, VSCode] 
+- Developed for Linux \& Unix users, streamlining \textbf{compilation and execution of code} in various programming languages \newline
+- Provided convenient installation by making the tool readily available on \textbf{Homebrew} and \textbf{AUR} (Arch User Repository) \newline
+- Implemented Python version detection with an accuracy rate of \textbf{90\%}, guaranteeing smooth programming experience \newline
+- Integrated \textbf{Vim and VS Code keybindings}, optimizing the development flow for seamless programming experience \newline
+- Integrated a \textbf{debugging mode}, enabling streamlined troubleshooting for enhanced software developer experience 
+
+ \item[{\href{https://github.com/proffapt/gsync}{GSYNC}} | Bash, Linux Uitilities] 
+- Developed for automating \textbf{real-time synchronization of files and folders} from a local system to GitHub as a \textbf{service} \newline
+- Implemented \textbf{service functionalities} - \textit{start}, \textit{stop}, \textit{status}, \textit{restart}, \textit{enable}, \& \textit{disable}, with innovative \textit{selective-start/stop} \newline
+- Elevated user experience and ease of use through efficient troubleshooting and intuitive \textbf{colored logs management}
+ 
+\end{description}
+% }
+
+%----------------------------------------------------------------------------------------
+%	Position of Responsibility
+%----------------------------------------------------------------------------------------
+\vspace{-0.1cm}
+ \section{\textcolor{primary}{Positions of Responsibility}}
+\vspace{+0.2cm}
+
+\begin{itemize}[leftmargin=0.55cm, rightmargin=0.2cm, label={\Large\textbullet}]
+
+\item \textbf{Technology Coordinator | \href{https://gymkhana.iitkgp.ac.in/}{Technology Students' Gymkhana, IIT Kharagpur}}\\
+- Oversaw \textbf{technological advancements} \& led a \textbf{tech team of 6 developers} at IIT Kharagpur; maintaining multiple projects \\
+- Assisted in resolving \textbf{over 200} student complaints every month, related to internet connectivity throughout the campus \\
+- Maintained multiple projects : \href{https://play.google.com/store/apps/details?id=com.apnainsti&pli=1}{\textbf{ApnaInsti}} app, Inventory Management System, \href{https://gymkhana.iitkgp.ac.in/}{\textbf{TSG website}}, Gymkhana Blogs using \href{https://ghost.org/}{\textbf{Ghost}} \\
+- \href{https://github.com/tsg-iitkgp/noticeboard}{\textbf{TSG Noticeboard}}: Central hub for IIT Kharagpur's tech-related announcements, updates, \& guidelines, serving the students \\
+- Developed a \textbf{dashboard} for TSG website \& ApnaInsti mobile app for dynamic data update and mass certificate generation \\
+- Acted as \textbf{Executive Head of Developers' Society} working with \textbf{72+} members promoting development culture on campus
+
+\item \textbf{Maintainer | \href{https://metakgp.org/}{Metakgp, IIT Kharagpur}}\\
+- Maintained various critical \href{https://github.com/metakgp}{\textbf{open source projects}} for student community of IIT Kharagpur, easing out stressful processes \\
+- These projects include \href{https://github.com/metakgp/gyft}{\textbf{gyft}} - timetable downloader, \href{http://kronos.streamlit.app}{\textbf{kronos}} - semester grade distribution, \href{https://wiki.metakgp.org}{\textbf{metawiki}} - IIT Kharagpur wikipedia \newline
+- More projects: \href{https://gyfe.metakgp.org}{\textbf{gyfe}} - exhaustive electives list builder, \href{https://github.com/metakgp/wimp}{\textbf{wimp}} - helps to find a professor based on their compiled schedule \newline
+- Developed comprehensive \textbf{CI/CD pipelines}, automating image builds, uploads to \textbf{DockerHub}, deployments, \& \textbf{healthchecks} \newline
+- Maintained all the servers related to above and other projects on \textbf{DigitalOcean} and DNS server using \textbf{Terraform} on \textbf{GitLab}
+
+\item \textbf{Advisor, \href{https://fossunited.org/clubs}{\textbf{FOSS Club Lead}} | \href{https://kossiitkgp.org}{Kharagpur Open Source Society, IIT Kharagpur}}\\
+- Organised \textbf{multiple student workshops}, promoting the adoption of open source and raising awareness among students \\
+- Organised KWoC-(22 and 23) (\textbf{\href{https://kwoc.kossiitkgp.org/}{Kharagpur Winter Of Code}}) a month long event with \textbf{1.2k+ \& 2.5k+} participants respectively \\
+- Developed \textbf{automated} workflows for \textbf{internal processes}, including \textbf{certificate generator} for KWoC and various PORs
+
+% \item \textbf{Co-Founder, \href{https://cybernity.org/}{Cybernity}}: Led a team of \textbf{18 ethical hackers} to mentor \textbf{10,000+ students} on genuine principles and ethical practices in cybersecurity through YouTube videos, Telegram chats, and a discussion platform developed using \href{https://www.discourse.org/}{Discourse}.
+
+\end{itemize}
+
+%----------------------------------------------------------------------------------------
+%	SKILLS 
+%----------------------------------------------------------------------------------------
+ \vspace{+0.4cm} \section{\textcolor{primary}{\href{https://www.github.com/proffapt/bodhitree}{Technical Skills}}}
+
+ \vspace{+0.2cm}
+
+ \begin{tabular}{r|p{15cm}}
+ \textsc{Languages} & Golang, Python, Bash, Java, Typescript, JavaScript, C/C++, R, LaTeX, HTML, CSS, Lua\\
+ \textsc{Frameworks} & Go-Fiber, Flask, Django, Node.js, Express.js, Hyperledger Fabric \\
+ \textsc{DBMS} & PostgreSQL, MongoDB, MySQL \\
+ \textsc{DevOps} & Computer Networking, Docker, Nginx, Linux System Administration, Cloudflare, Amazon Web Services (AWS), DigitalOcean (DO), Redis, Jenkins, ArgoCD, Terraform, Github Actions \\
+ \textsc{OS Platforms} & Linux 5/6 (Debian, Ubuntu, Fedora, NixOS), Unix (FreeBSD, OpenBSD, Solaris-8,9,10 \& MacOS X) \\
+ \textsc{Blockchain} & Metamask Snaps, Hyperledger Fabric, Solidity \\
+ \textsc{Others} & Git, GitHub, GitLab, Proxmox, Backend Development Methodologies, Web Browser Extension Development, Penetration Testing (Cyber Security), Object Oriented Programming, Gurobi and CPLEX Optimisation \\
+ 
+ % -------- ToAdd but not confident enough -----------
+ %  React.js, Data Structures and Algorithms
+ % ----------
+ 
+\end{tabular}
+
+%----------------------------------------------------------------------------------------
+%	COURSEWORK
+%----------------------------------------------------------------------------------------
+
+% --- Have better Activities & Leadership section
+ % \vspace{+0.2cm}
+ % \section{\textcolor{primary}{Relevant Coursework}
+ % \hfill\small\textsc{(T)heory and (L)aboratory}}
+ % \vspace{+0.1cm}
+
+ % \begin{tabular}{r|p{15cm}}
+ % \textsc{Completed} & \href{https://github.com/proffapt/iitkgp-pds-lab }{Programming And Data Structures (T/L)} | Advanced Calculus (T) | Transform Calculus (T) | Linear Algebra, Numerical and Complex Analysis (T) | Probability and Statistics (T) | Operations Research-I (T) | Operations Research-II (T/L) | Simulation (T/L) | Machine Learning Foundation and Applications (T/L)
+ % \end{tabular}
+ %------
+
+\end{document}
